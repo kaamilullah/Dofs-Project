@@ -4,7 +4,7 @@ resource "aws_codebuild_project" "dofs_codebuild" {
 
   source {
     type      = "GITHUB"
-    location  = "https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git"  # ✅ replace
+    location  = "https://github.com/kaamilullah/Dofs-Project.git"  # ✅ replace
     buildspec = "buildspec.yml"
   }
 
@@ -16,7 +16,6 @@ resource "aws_codebuild_project" "dofs_codebuild" {
     compute_type                = "BUILD_GENERAL1_SMALL"
     image                       = "aws/codebuild/standard:7.0"
     type                        = "LINUX_CONTAINER"
-    environment_variables       = []
     privileged_mode             = false
   }
 

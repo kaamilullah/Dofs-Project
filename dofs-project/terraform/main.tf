@@ -28,3 +28,7 @@ module "stepfunctions" {
   order_storage_lambda_arn = module.lambdas.order_storage_lambda_arn
   order_queue_url          = module.sqs.order_queue_url
 }
+
+module "cicd" {
+  source = "./cicd"
+}
