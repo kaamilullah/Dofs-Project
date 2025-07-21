@@ -2,11 +2,13 @@ resource "aws_codebuild_project" "dofs_codebuild" {
   name          = "dofs-ci"
   description   = "Build + Deploy via Terraform from GitHub using CodeBuild"
 
-  source {
-    type      = "GITHUB"
-    location  = "https://github.com/kaamilullah/Dofs-Project.git"  # ✅ replace
-    buildspec = "buildspec.yml"
-  }
+source {
+  type      = "GITHUB"
+  location  = "https://github.com/kaamilullah/Dofs-Project.git"
+  buildspec = "buildspec.yml"
+}
+
+
 
   artifacts {
     type = "NO_ARTIFACTS"
