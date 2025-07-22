@@ -32,3 +32,8 @@ module "stepfunctions" {
 module "cicd" {
   source = "./cicd"
 }
+
+module "monitoring" {
+  source = "./modules/monitoring"
+  # pass variables, e.g., lambda_function_name = module.lambdas.api_handler_function_name
+}
